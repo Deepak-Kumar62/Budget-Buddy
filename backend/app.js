@@ -10,6 +10,7 @@ import ecpenseRoutes from "./routes/expenses.routes.js";
 
 app.use(express.json());
 app.use(cookieParser());
+
 app.use(
   cors({
     origin: "https://monitytrack.netlify.app",

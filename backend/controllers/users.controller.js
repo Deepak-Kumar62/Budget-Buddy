@@ -30,8 +30,9 @@ export const register = async (req, res, next) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false,
-      maxAge: 7 * 24 * 60 * 60 * 1000,
+      secure: true, // Required for HTTPS
+      sameSite: "None", // Required for cross-site cookies
+      maxAge: 7 * 24 * 60 * 60 * 1000, // Optional: 7 days
     });
 
     return res.status(201).json({
@@ -47,7 +48,6 @@ export const register = async (req, res, next) => {
     next(error);
   }
 };
-
 
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
@@ -79,8 +79,9 @@ export const login = async (req, res, next) => {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: false,
-      maxAge: 7 * 24 * 60 * 60 * 1000,
+      secure: true, // Required for HTTPS
+      sameSite: "None", // Required for cross-site cookies
+      maxAge: 7 * 24 * 60 * 60 * 1000, // Optional: 7 days
     });
 
     return res.status(200).json({
@@ -103,7 +104,6 @@ export const login = async (req, res, next) => {
     }
   }
 };
-
 
 export const logout = (req, res, next) => {
   try {
