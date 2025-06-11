@@ -5,8 +5,6 @@ import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-console.log(process.env.JWT_SECRET)
-
 const userSchema = new mongoose.Schema(
   {
     name: {

@@ -6,7 +6,7 @@ import Register from './pages/Register';
 import { useAppContext } from './contexts/AppContext';
 import { Route, Routes } from 'react-router-dom';
 import IncomeHistory from './pages/IncomeHistory';
-import ExpenseHistory from './pages/ExpressHistory';
+import ExpenseHistory from './pages/ExpenseHistory';
 import AddIncome from './pages/AddIncome';
 import AddExpense from './pages/AddExpense';
 import AllTransaction from './pages/AllTransaction';
