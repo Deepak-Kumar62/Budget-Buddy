@@ -15,7 +15,8 @@ export const AppProvider = ({ children }) => {
 
     // Axios config
     axios.defaults.withCredentials = true;
-    axios.defaults.baseURL = "http://localhost:8000/api/v1"
+    axios.defaults.baseURL = import.meta.env.VITE_BASE_URL || "http://localhost:8000/api/v1";
+
 
     // ================== AUTH =====================
     const register = async (formData) => {
