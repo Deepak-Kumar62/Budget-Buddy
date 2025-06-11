@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://monitytrack.netlify.app/",
+    origin: "https://monitytrack.netlify.app",
     credentials: true,
   })
 );
