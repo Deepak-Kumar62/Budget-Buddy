@@ -83,7 +83,7 @@ export const AppProvider = ({ children }) => {
 
     const updateExpense = async (id, updatedData) => {
         try {
-            const res = await axios.put(`expense/${id}`, updatedData);
+            const res = await axios.put(`/expense/${id}`, updatedData);
             toast.success(res.data.message);
             getExpenses();
         } catch (error) {
